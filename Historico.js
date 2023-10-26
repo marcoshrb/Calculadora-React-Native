@@ -13,9 +13,7 @@ export default function Historico(props) {
         <Text style={styles.HistoricoTitulo}>
           Historico
         </Text>
-        <View style={styles.card}>
-          <Text style={styles.textos}>{utils.number}</Text>
-        </View>
+        <Text style={styles.textos}>{utils.numbers.map( (number) => <li key = { number.toString() }>{ number }</li>) }</Text>
       </View>
     </View>
   );
@@ -35,16 +33,6 @@ const styles = StyleSheet.create({
     fontSize: "80px",
     marginBottom: "20px",
     marginTop: "50px"
-  },
-  card: {
-    width: '500px',
-    maxHeight: '60px',
-    borderRadius: '3%',
-    borderWidth: '2px',
-    borderColor: 'black',
-    flex: 1,
-    alignItems: "flex-start"
-
   },
   textos: {
     fontSize: '30px',

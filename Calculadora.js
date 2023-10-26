@@ -19,8 +19,12 @@ export default function Calculadora(props) {
   const calcular = () => {
     if(number != ""){
       setNumber(eval(number));
-
-      setUtils({...utils, number: number + " = " + eval(number)});
+        if(!utils.numbers){
+             setUtils({...utils, numbers:[number + " = " + eval(number)]});
+        }else{
+            setUtils({...utils, numbers: [...utils.numbers,number + " = " + eval(number)]});
+        }
+      
     }
   };
 
