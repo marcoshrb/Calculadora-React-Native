@@ -2,7 +2,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import { UtilsContext } from './Context.js';
 import Calculadora from './Calculadora';
-import Historico from './HIsotrico';
+import Historico from './Historico';
 import { useState } from 'react';
 
 export default function App() {
